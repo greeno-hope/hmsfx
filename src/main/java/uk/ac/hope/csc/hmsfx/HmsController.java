@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import javafx.scene.control.TextInputDialog;
 import uk.ac.hope.csc.hostel.management.system.*;
 
 import java.io.File;
@@ -88,7 +89,9 @@ public class HmsController {
 
     @FXML
     void onButtonRemoveTenant(ActionEvent event) {
-
+        TextInputDialog tid = new TextInputDialog();
+        tid.setHeaderText("Enter Student ID");
+        int sid = Integer.parseInt(tid.showAndWait().get());
     }
 
     @FXML
